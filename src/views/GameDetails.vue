@@ -263,6 +263,54 @@ const leagueTable = [
   },
 ];
 
+const h2hGames = [
+  {
+    homeTeam: "Liverpool",
+    awayTeam: "Manchester City",
+    game: "Premier League",
+    year: 2021,
+    homeScore: 1,
+    awayScore: 2,
+    venue: "England",
+  },
+  {
+    homeTeam: "Liverpool",
+    awayTeam: "Manchester City",
+    game: "Premier League 20/21",
+    year: 2021,
+    homeScore: 3,
+    awayScore: 2,
+    venue: "England",
+  },
+  {
+    homeTeam: "Liverpool",
+    awayTeam: "Manchester City",
+    game: "FA Cup",
+    year: 2021,
+    homeScore: 2,
+    awayScore: 2,
+    venue: "England",
+  },
+  {
+    homeTeam: "Liverpool",
+    awayTeam: "Manchester City",
+    game: "Champions League",
+    year: 2020,
+    homeScore: 1,
+    awayScore: 3,
+    venue: "Germany",
+  },
+  {
+    homeTeam: "Liverpool",
+    awayTeam: "Manchester City",
+    game: "Premier League 19/19",
+    year: 2019,
+    homeScore: 0,
+    awayScore: 0,
+    venue: "England",
+  },
+];
+
 const footerText = [
   "Careers",
   "Mobile",
@@ -374,7 +422,7 @@ setInterval(() => {
           @click="activeTab = tab"
           v-for="(tab, idx) in tabs"
           :key="idx"
-          class="text-11px font-semibold"
+          class="text-11px font-semibold cursor-pointer"
           :class="tab === activeTab ? 'text-n-orange' : 'text-pry'"
         >
           {{ tab }}
@@ -453,37 +501,135 @@ setInterval(() => {
             <p class="text-n-white">Allison</p>
           </div>
         </div>
+        <div
+          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+        >
+          <p class="mr-2 text-py text-11px">12'</p>
+          <div class="text-11px flex items-center">
+            <p class="text-n-white">Van Djick</p>
+            <div class="ml-2 h-3 w-2 bg-yellow-300 rounded-sm"></div>
+          </div>
+        </div>
+        <div
+          class="p-2 flex justify-between items-center border-n-bg-gray border-b"
+        >
+          <p class="mr-2 text-pry text-11px">30'</p>
+          <div class="text-11px flex items-center">
+            <div class="mr-2 h-3 w-2 bg-yellow-300 rounded-sm"></div>
+            <p class="text-n-white">Allison</p>
+          </div>
+        </div>
+        <div
+          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+        >
+          <p class="mr-2 text-py text-11px">12'</p>
+          <div class="text-11px flex items-center">
+            <p class="text-n-white">Van Djick</p>
+            <div class="ml-2 h-3 w-2 bg-yellow-300 rounded-sm"></div>
+          </div>
+        </div>
+        <div
+          class="p-2 flex justify-between items-center border-n-bg-gray border-b"
+        >
+          <p class="mr-2 text-pry text-11px">30'</p>
+          <div class="text-11px flex items-center">
+            <div class="mr-2 h-3 w-2 bg-yellow-300 rounded-sm"></div>
+            <p class="text-n-white">Allison</p>
+          </div>
+        </div>
+        <div
+          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+        >
+          <p class="mr-2 text-py text-11px">12'</p>
+          <div class="text-11px flex items-center">
+            <p class="text-n-white">Van Djick</p>
+            <div class="ml-2 h-3 w-2 bg-yellow-300 rounded-sm"></div>
+          </div>
+        </div>
+        <div
+          class="p-2 flex justify-between items-center border-n-bg-gray border-b"
+        >
+          <p class="mr-2 text-pry text-11px">30'</p>
+          <div class="text-11px flex items-center">
+            <div class="mr-2 h-3 w-2 bg-yellow-300 rounded-sm"></div>
+            <p class="text-n-white">Allison</p>
+          </div>
+        </div>
       </div>
 
       <div v-else class="mx-1 border border-n-bg-gray rounded-md">
         <div
           class="p-2 flex justify-start items-center border-n-bg-gray border-b"
         >
+          <p class="mr-2 text-pry text-11px">1'</p>
+          <p class="text-pry text-11px">
+            Liverpool win the toss and will have the first kick
+          </p>
+        </div>
+        <div
+          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+        >
+          <p class="mr-2 text-pry text-11px">3'</p>
+          <p class="text-pry text-11px">
+            The ball is being played from the left to the right
+          </p>
+        </div>
+        <div
+          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+        >
+          <p class="mr-2 text-pry text-11px">6'</p>
+          <p class="text-pry text-11px">
+            Manchester City press on to win the ball
+          </p>
+        </div>
+
+        <div
+          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+        >
           <p class="mr-2 text-pry text-11px">9'</p>
+          <p class="text-pry text-11px">
+            Ferdinho completes a clean tackle to give Liverpool a throw in
+          </p>
+        </div>
+        <div
+          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+        >
+          <p class="mr-2 text-pry text-11px">23'</p>
           <p class="text-pry text-11px">
             Sadio Mane hits the ball towards goal
           </p>
         </div>
         <div class="p-2 flex items-center border-n-bg-gray border-b">
-          <p class="mr-2 text-pry text-11px">10'</p>
+          <p class="mr-2 text-pry text-11px">34'</p>
           <p class="text-pry text-11px">
             The goalkeeper plays a long ball to Gabriel Jesus
           </p>
         </div>
         <div class="p-2 flex items-center border-n-bg-gray border-b">
-          <p class="mr-2 text-pry text-11px">14'</p>
+          <p class="mr-2 text-pry text-11px">38'</p>
           <p class="text-pry text-11px">
-            Manchester City keeps the pressure on
+            Liverpool mounting pressure on City's defenders
           </p>
         </div>
         <div class="p-2 flex items-center border-n-bg-gray border-b">
-          <p class="mr-2 text-pry text-11px">20'</p>
-          <p class="text-pry text-11px">Excellent defensive from Liverpool</p>
+          <p class="mr-2 text-pry text-11px">40'</p>
+          <p class="text-pry text-11px">
+            A brilliant clearancefrom Walker to give Manchester City a sigh of
+            relief
+          </p>
+        </div>
+        <div
+          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+        >
+          <p class="mr-2 text-pry text-11px">45+2'</p>
+          <p class="text-pry text-11px">
+            It's over! The referee blows for halftime
+          </p>
         </div>
         <div class="p-2 flex items-center border-n-bg-gray border-b">
-          <p class="mr-2 text-pry text-11px">30'</p>
+          <p class="mr-2 text-pry text-11px">45+2'</p>
           <p class="text-pry text-11px">
-            Both teams seem to be doing excellently well in game play
+            Ball possession: Liverpool: 51%, Manchester City: 49%
           </p>
         </div>
       </div>
@@ -796,8 +942,8 @@ setInterval(() => {
 
       <div class="mt-2 border-n-bg-gray border rounded-md">
         <div class="p-2 flex justify-around gap-3">
-          <p class="capitalize text-11px">Coach 1</p>
-          <p class="capitalize text-11px">Coach 2</p>
+          <p class="capitalize text-11px">Jurgen Klopp</p>
+          <p class="capitalize text-11px">Pep Guadiola</p>
         </div>
       </div>
     </div>
@@ -819,11 +965,11 @@ setInterval(() => {
         </p>
       </div>
 
-      <div class="border-n-bg-gray border rounded-xl">
+      <div class="mt-3 border-n-bg-gray border rounded-xl">
         <table class="w-full">
           <thead class="border-n-bg-gray border-b">
             <tr>
-              <th class="h-7 text-left pl-2 text-xxs uppercase">#</th>
+              <th class="sm:w-12 h-7 text-center pl-2 text-xxs uppercase">#</th>
               <th
                 class="h-7 text-left px-1 w-2/3 sm:w-[300px] text-xxs uppercase"
               >
@@ -831,27 +977,27 @@ setInterval(() => {
               </th>
               <th class="h-7 text-center px-1 text-xxs uppercase">p</th>
               <th
-                class="hidden sm:block h-7 text-center px-1 text-xxs uppercase"
+                class="hidden sm:table-cell h-7 text-center px-1 text-xxs uppercase"
               >
                 w
               </th>
               <th
-                class="hidden sm:block h-7 text-center px-1 text-xxs uppercase"
+                class="hidden sm:table-cell h-7 text-center px-1 text-xxs uppercase"
               >
                 d
               </th>
               <th
-                class="hidden sm:block h-7 text-center px-1 text-xxs uppercase"
+                class="hidden sm:table-cell h-7 text-center px-1 text-xxs uppercase"
               >
                 l
               </th>
               <th
-                class="hidden sm:block h-7 text-center px-1 text-xxs uppercase"
+                class="hidden sm:table-cell h-7 text-center px-1 text-xxs uppercase"
               >
                 f
               </th>
               <th
-                class="hidden sm:block h-7 text-center px-1 text-xxs uppercase"
+                class="hidden sm:table-cell h-7 text-center px-1 text-xxs uppercase"
               >
                 a
               </th>
@@ -866,7 +1012,7 @@ setInterval(() => {
               :key="idx"
               class="py-1 h-8 border-n-bg-gray border-b"
             >
-              <td class="text-center pl-2 text-xxs">
+              <td class="sm:w-12 text-center pl-2 text-xxs">
                 <div class="flex flex-col justify-center relative">
                   <span> {{ idx + 1 }}</span>
                   <div
@@ -914,19 +1060,19 @@ setInterval(() => {
               <td class="text-center px-1 text-xxs">
                 {{ club.matchesPlayed }}
               </td>
-              <td class="hidden sm:block text-center px-1 text-xxs">
+              <td class="hidden sm:table-cell text-center px-1 text-xxs">
                 {{ club.matchesWon }}
               </td>
-              <td class="hidden sm:block text-center px-1 text-xxs">
+              <td class="hidden sm:table-cell text-center px-1 text-xxs">
                 {{ club.matchesDrawn }}
               </td>
-              <td class="hidden sm:block text-center px-1 text-xxs">
+              <td class="hidden sm:table-cell text-center px-1 text-xxs">
                 {{ club.matchesLost }}
               </td>
-              <td class="hidden sm:block text-center px-1 text-xxs">
+              <td class="hidden sm:table-cell text-center px-1 text-xxs">
                 {{ club.matchesF }}
               </td>
-              <td class="hidden sm:block text-center px-1 text-xxs">
+              <td class="hidden sm:table-cell text-center px-1 text-xxs">
                 {{ club.matchesA }}
               </td>
               <td class="text-center px-1 text-xxs">
@@ -982,7 +1128,61 @@ setInterval(() => {
       </div>
     </div>
 
-    <div v-if="activeTab === 'H2H'" class="px-2.5"></div>
+    <div v-if="activeTab === 'H2H'" class="px-2.5">
+      <div class="px-1 pb-2 flex items-center gap-2">
+        <p
+          @click="activeH2HSubTab = tab"
+          v-for="(tab, idx) in H2HTabs"
+          :key="idx"
+          class="uppercase text-11px py-1 px-2 rounded-2xl"
+          :class="
+            activeH2HSubTab === tab
+              ? 'bg-n-white text-n-black'
+              : 'bg-transparent border-pry border'
+          "
+        >
+          {{ tab }}
+        </p>
+      </div>
+
+      <div v-for="(game, idx) in h2hGames" :key="idx" class="mt-2">
+        <div class="flex items-center gap-2 mb-2">
+          <img src="../assets/logo.png" alt="" class="w-5 h-5" />
+
+          <div class="grid">
+            <p class="capitalize text-sm font-semibold">{{ game.game }}</p>
+            <p class="capitalize text-11px text-pry">{{ game.venue }}</p>
+          </div>
+        </div>
+
+        <div
+          class="bg-n-bg-gray rounded-lg px-[5px] py-2 flex justify-between items-center"
+        >
+          <div class="flex gap-2">
+            <div class="grid gap-2">
+              <p class="text-xxs text-center font-thin">{{ game.year }}</p>
+              <p class="text-11px text-center font-thin">FT</p>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <img src="../assets/logo.png" alt="" class="w-5 h-5" />
+                <p class="text-sm">{{ game.homeTeam }}</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="../assets/logo.png" alt="" class="w-5 h-5" />
+                <p class="text-sm">{{ game.awayTeam }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <div class="flex flex-col">
+              <p class="text-n-white text-sm">{{ game.homeScore }}</p>
+              <p class="text-n-white text-sm">{{ game.awayScore }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="mt-4">
       <div class="px-2.5 pb-2">
@@ -1000,7 +1200,7 @@ setInterval(() => {
         </p>
       </div>
       <div class="pb-1">
-        <p class="text-11px flex justify-center items-center">
+        <p class="text-11px flex justify-center items-center gap-1">
           <span> <i class="fa fa-copyright"></i></span>
           <span>1998-2022</span>
           <span>LiveScore</span>

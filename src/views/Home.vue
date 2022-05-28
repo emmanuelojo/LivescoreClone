@@ -11,6 +11,88 @@ const canBet = ref(true);
 const showCalendar = ref(false);
 const gameDate = ref(new Date().toISOString().split("T")[0]);
 
+const gameFixtures = [
+  {
+    league: "Premier League",
+    country: "England",
+    fixtures: [
+      {
+        homeTeam: "Liverpool",
+        awayTeam: "Manchester City",
+        game: "Premier League",
+        homeScore: 1,
+        awayScore: 2,
+        time: "16:30",
+        hasStarted: false,
+        hasEnded: false,
+      },
+      {
+        homeTeam: "Chelsea",
+        awayTeam: "Arsenal",
+        game: "FA Cup",
+        homeScore: 1,
+        awayScore: 2,
+        time: "30'",
+        hasStarted: true,
+        hasEnded: false,
+      },
+    ],
+  },
+  {
+    league: "La Liga Santander",
+    country: "Spain",
+    fixtures: [
+      {
+        homeTeam: "Barcelona",
+        awayTeam: "Real Madrid",
+        game: "El Classico",
+        homeScore: 2,
+        awayScore: 2,
+        time: "88'",
+        hasStarted: false,
+        hasEnded: true,
+      },
+      {
+        homeTeam: "Athletico Madrid",
+        awayTeam: "Villareal",
+        game: "La Liga",
+        homeScore: 1,
+        awayScore: 2,
+        time: "21:30'",
+        hasStarted: false,
+        hasEnded: false,
+      },
+    ],
+  },
+  {
+    league: "Seria A",
+    country: "Italy",
+    fixtures: [
+      {
+        homeTeam: "Juventus",
+        awayTeam: "AC Milan",
+        game: "League",
+        homeScore: 1,
+        awayScore: 2,
+
+        time: "16:30",
+        hasStarted: false,
+        hasEnded: false,
+      },
+      {
+        homeTeam: "Inter Milan",
+        awayTeam: "Napoli",
+        game: "Ligue Cup",
+        homeScore: 0,
+        awayScore: 0,
+        time: "11'",
+        hasStarted: true,
+        hasEnded: false,
+      },
+    ],
+  },
+];
+
 setInterval(() => {
   homeScore.value = getRandomScore(6);
 }, 7000);
@@ -51,9 +133,11 @@ const goToGame = (id: number) => {
         <p class="flex justify-center text-11px uppercase">thu</p>
         <p class="text-9px uppercase">19 may</p>
       </div>
-      <div>
-        <p class="flex justify-center text-11px uppercase">today</p>
-        <p class="text-9px uppercase">20 may</p>
+      <div class="">
+        <p class="flex justify-center text-11px uppercase text-n-orange">
+          today
+        </p>
+        <p class="text-9px uppercase text-n-orange">20 may</p>
       </div>
       <div>
         <p class="flex justify-center text-11px uppercase">sat</p>
@@ -86,7 +170,7 @@ const goToGame = (id: number) => {
     </div>
 
     <div class="px-2.5">
-      <div v-for="i in 2" class="grid mb-2">
+      <!-- <div v-for="i in 2" class="grid mb-2">
         <div class="flex justify-between items-center">
           <div class="flex items-center gap-2 mb-2">
             <img src="../assets/logo.png" alt="" class="w-5 h-5" />
@@ -149,46 +233,75 @@ const goToGame = (id: number) => {
             <i class="fa fa-star-o"></i>
           </div>
         </div>
-      </div>
-      <div v-for="i in 3" class="grid mb-2">
+      </div> -->
+
+      <div v-for="(match, idx) in gameFixtures" :key="idx" class="grid mb-2">
         <div class="flex justify-between items-center">
           <div class="flex items-center gap-2 mb-2">
             <img src="../assets/logo.png" alt="" class="w-5 h-5" />
 
             <div class="grid">
-              <p class="capitalize text-sm font-semibold">LaLiga Santander</p>
-              <p class="capitalize text-11px text-pry">Spain</p>
+              <p class="capitalize text-sm font-semibold">{{ match.league }}</p>
+              <p class="capitalize text-11px text-pry">{{ match.country }}</p>
             </div>
           </div>
 
-          <div class="text-n-white">
+          <div @click="goToGame(56)" class="text-white">
             <i class="fa fa-chevron-right font-thin"></i>
           </div>
         </div>
 
         <div
-          class="bg-n-bg-gray rounded-lg px-[5px] py-2 flex justify-between items-center"
+          v-for="(fixture, idx) in match.fixtures"
+          :key="idx"
+          class="mb-3 bg-n-bg-gray rounded-lg px-[5px] py-2 flex justify-between items-center"
         >
           <div class="flex gap-2">
-            <div class="grid gap-[6px]">
+            <div
+              v-if="fixture.hasStarted === false && fixture.hasEnded === false"
+              class="grid gap-[6px]"
+            >
               <div class="flex items-center">
                 <i class="fa fa-play border border-white rounded"></i>
                 <p class="ml-1 text-11px">Bet</p>
               </div>
-              <p class="text-11px text-center font-thin">16:30</p>
+              <p class="text-11px text-center font-thin">{{ fixture.time }}</p>
+            </div>
+            <div
+              v-else-if="fixture.hasEnded === false"
+              class="flex justify-center items-center relative"
+            >
+              <div
+                class="absolute -left-[6px] rounded-tr-xl rounded-br-xl w-1 h-full bg-n-orange"
+              ></div>
+              <p class="ml-1 text-11px text-center font-thin text-n-orange">
+                {{ fixture.time }}
+              </p>
+            </div>
+            <div v-else class="flex justify-center items-center">
+              <p class="text-11px text-center font-thin">FT</p>
             </div>
             <div>
               <div class="flex items-center gap-2">
                 <img src="../assets/logo.png" alt="" class="w-5 h-5" />
-                <p class="text-sm">Valencia</p>
+                <p class="text-sm">{{ fixture.homeTeam }}</p>
               </div>
               <div class="flex items-center gap-2">
                 <img src="../assets/logo.png" alt="" class="w-5 h-5" />
-                <p class="text-sm">Celta Vigo</p>
+                <p class="text-sm">{{ fixture.awayTeam }}</p>
               </div>
             </div>
           </div>
-          <div><i class="fa fa-star-o"></i></div>
+          <div class="flex items-center gap-2">
+            <div
+              v-if="gameStatus === 'Started' || 'Ended'"
+              class="flex flex-col"
+            >
+              <p class="text-n-white text-sm">{{ fixture.homeScore }}</p>
+              <p class="text-n-white text-sm">{{ fixture.awayScore }}</p>
+            </div>
+            <i class="fa fa-star-o"></i>
+          </div>
         </div>
       </div>
     </div>

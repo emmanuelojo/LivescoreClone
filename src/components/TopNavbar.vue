@@ -7,7 +7,13 @@ const toggleMenu = () => {
   isToggled.value = !isToggled.value;
 };
 
-const tabs = ["Football", "Hockey", "Basketball", "Tennis", "Cricket"];
+const tabs = [
+  { name: "Football", link: "/", linkName: "Home" },
+  { name: "Hockey", link: "/", linkName: "Home" },
+  { name: "Basketball", link: "/", linkName: "Home" },
+  { name: "Tennis", link: "/", linkName: "Home" },
+  { name: "Cricket", link: "/", linkName: "Home" },
+];
 
 const activeTab = ref("Football");
 </script>
@@ -30,17 +36,22 @@ const activeTab = ref("Football");
     </div>
   </nav>
 
-  <div class="px-2.5 flex items-center overflow-auto">
-    <p
+  <div class="md:mt-4 px-2.5 flex items-center overflow-auto">
+    <router-link
       v-for="(tab, idx) in tabs"
       :key="idx"
-      class="px-3 py-[3px] mr-3 mb-5 rounded-xl text-sm font-semibold flex justify-center items-center"
-      :class="
-        activeTab === tab ? 'bg-n-white text-n-black' : 'bg-n-bg-gray text-pry '
-      "
-    >
-      {{ tab }}
-    </p>
+      :to="{ name: tab.linkName }"
+      ><p
+        class="px-3 py-[3px] mr-3 mb-5 rounded-xl text-sm font-semibold flex justify-center items-center"
+        :class="
+          activeTab === tab.name
+            ? 'bg-n-white text-n-black'
+            : 'bg-n-bg-gray text-pry '
+        "
+      >
+        {{ tab.name }}
+      </p>
+    </router-link>
   </div>
 </template>
 

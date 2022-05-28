@@ -12,7 +12,7 @@
         </div>
         <div>
           <p
-            class="w-[70px] flex justify-center items-center capitalize text-n-blue bg-n-white py-[5px] px-2 rounded-md text-11px font-semibold"
+            class="w-max flex justify-center items-center capitalize text-n-blue bg-n-white py-[5px] px-2 rounded-md text-11px font-semibold"
           >
             get bonus
           </p>
