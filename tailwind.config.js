@@ -10,6 +10,10 @@ module.exports = {
         "n-orange": "#FF8A00",
         "n-blue": "#0D3AFF",
         "n-gray": "#555555",
+        "n-dark-blue": "#072D5B",
+        "n-dark-orange": "#AB5E03",
+        "n-light-green": "#23DF8C",
+        "n-dark-red": "#961A3D",
       },
       fontSize: {
         "9px": "9px",
