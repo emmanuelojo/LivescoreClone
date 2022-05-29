@@ -4,7 +4,7 @@
   <div class="">
     <div class="my-4 py-1 px-[6px] bg-n-blue text-n-white rounded-md">
       <div class="flex justify-between items-center">
-        <div class="flex items-center">
+        <div class="flex items-center gap-1">
           <img
             src="https://www.livescore.com/ls-web-assets/svgs/common/ls-bet-icon-c1a591cb403d151cb7dd7ca2b40413a6.svg"
             alt="logo"
@@ -22,7 +22,7 @@
           </p>
         </div>
       </div>
-      <p class="text-[7px]">
+      <p class="text-[7px] mt-[10px]">
         *New customers only. T&Cs apply. Bet Responsibly. 18+
       </p>
     </div>
