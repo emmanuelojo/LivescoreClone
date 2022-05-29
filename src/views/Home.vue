@@ -232,7 +232,7 @@ const setDates = () => {};
           :key="idx"
           class="mb-3 bg-n-bg-gray rounded-lg p-3 flex justify-between items-center"
         >
-          <div class="flex gap-2">
+          <div class="flex items-center gap-2">
             <div
               v-if="fixture.hasStarted === false && fixture.hasEnded === false"
               class="grid gap-[6px] w-10"
@@ -282,17 +282,18 @@ const setDates = () => {};
               <p class="text-n-white text-sm">{{ fixture.homeScore }}</p>
               <p class="text-n-white text-sm">{{ fixture.awayScore }}</p>
             </div>
-          </div>
-          <div
-            @click="fixture.markAsFavourite = !fixture.markAsFavourite"
-            class="cursor-pointer"
-            :class="`${
-              fixture.markAsFavourite ? 'text-n-orange' : 'text-n-white'
-            }`"
-          >
-            <i
-              :class="`fa fa-${fixture.markAsFavourite ? 'star ' : 'star-o'}`"
-            ></i>
+
+            <div
+              @click="fixture.markAsFavourite = !fixture.markAsFavourite"
+              class="cursor-pointer"
+              :class="`${
+                fixture.markAsFavourite ? 'text-n-orange' : 'text-n-white'
+              }`"
+            >
+              <i
+                :class="`fa fa-${fixture.markAsFavourite ? 'star ' : 'star-o'}`"
+              ></i>
+            </div>
           </div>
         </div>
       </div>
