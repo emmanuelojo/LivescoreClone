@@ -2,7 +2,7 @@
 
 <template>
   <div class="">
-    <div class="my-4 py-1 px-[6px] bg-n-blue text-n-white rounded-md">
+    <div class="my-4 p-2 bg-n-blue text-n-white rounded-md">
       <div class="flex justify-between items-center">
         <div class="flex items-center gap-1">
           <img
