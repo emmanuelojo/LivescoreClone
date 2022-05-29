@@ -248,7 +248,7 @@ const setDates = () => {};
               class="flex justify-center items-center relative w-10"
             >
               <div
-                class="absolute -left-[10px] rounded-tr-xl rounded-br-xl w-1 h-full bg-n-orange"
+                class="absolute -left-[10px] rounded-tr-xl rounded-br-xl w-1 h-14 bg-n-orange"
               ></div>
               <p class="text-11px text-center font-thin text-n-orange">
                 {{ fixture.time }}
