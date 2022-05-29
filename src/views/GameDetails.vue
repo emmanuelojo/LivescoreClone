@@ -360,7 +360,7 @@ setInterval(() => {
 </script>
 
 <template>
-  <div class="text-n-white py-1">
+  <div class="text-n-white py-1 lg:w-[50%] lg:mx-auto">
     <div class="px-2.5 mb-2 flex justify-between items-center">
       <div class="flex items-center gap-2 mb-2">
         <img
@@ -495,7 +495,7 @@ setInterval(() => {
           @click="activeSubtab = tab"
           v-for="(tab, idx) in subTabs"
           :key="idx"
-          class="uppercase text-11px py-1 px-2 rounded-2xl"
+          class="uppercase text-11px py-1 px-2 rounded-2xl cursor-pointer"
           :class="
             activeSubtab === tab
               ? 'bg-n-white text-n-black'
@@ -989,7 +989,7 @@ setInterval(() => {
           @click="activeTableSubTab = tab"
           v-for="(tab, idx) in tableTabs"
           :key="idx"
-          class="uppercase text-11px py-1 px-2 rounded-2xl"
+          class="uppercase text-11px py-1 px-2 rounded-2xl cursor-pointer"
           :class="
             activeTableSubTab === tab
               ? 'bg-n-white text-n-black'
@@ -1165,7 +1165,7 @@ setInterval(() => {
           @click="activeH2HSubTab = tab"
           v-for="(tab, idx) in H2HTabs"
           :key="idx"
-          class="uppercase text-11px py-1 px-2 rounded-2xl"
+          class="uppercase text-11px py-1 px-2 rounded-2xl cursor-pointer"
           :class="
             activeH2HSubTab === tab
               ? 'bg-n-white text-n-black'

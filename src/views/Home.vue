@@ -11,7 +11,7 @@ const canBet = ref(true);
 const showCalendar = ref(false);
 const gameDate = ref(new Date().toISOString().split("T")[0]);
 
-const gameFixtures = [
+const gameFixtures = ref([
   {
     league: "Premier League",
     country: "England",
@@ -28,6 +28,7 @@ const gameFixtures = [
         time: "16:30",
         hasStarted: false,
         hasEnded: false,
+        markAsFavourite: false,
       },
       {
         homeTeam: "Chelsea",
@@ -40,6 +41,7 @@ const gameFixtures = [
         time: "30'",
         hasStarted: true,
         hasEnded: false,
+        markAsFavourite: false,
       },
     ],
   },
@@ -69,9 +71,10 @@ const gameFixtures = [
         game: "La Liga",
         homeScore: 1,
         awayScore: 2,
-        time: "21:30'",
+        time: "21:30",
         hasStarted: false,
         hasEnded: false,
+        markAsFavourite: false,
       },
     ],
   },
@@ -93,6 +96,7 @@ const gameFixtures = [
         time: "16:30",
         hasStarted: false,
         hasEnded: false,
+        markAsFavourite: false,
       },
       {
         homeTeam: "Inter Milan",
@@ -103,13 +107,22 @@ const gameFixtures = [
         game: "Ligue Cup",
         homeScore: 0,
         awayScore: 0,
-        time: "11'",
+        time: "11",
         hasStarted: true,
         hasEnded: false,
+        markAsFavourite: false,
       },
     ],
   },
-];
+]);
+
+setInterval(() => {
+  //  gameFixtures.value.forEach((fixture, idx) => {
+  // fixture[idx].fixtures = fixture.fixtures.map((game) => {
+  //   return { ...game, time++ }
+  // })
+  // })
+}, 5000);
 
 setInterval(() => {
   homeScore.value = getRandomScore(6);
@@ -137,7 +150,7 @@ const setDates = () => {};
 </script>
 
 <template>
-  <div class="text-pry">
+  <div class="text-pry lg:w-[50%] lg:mx-auto">
     <div class="px-2.5 flex justify-between items-center">
       <p
         class="font-bold w-10 py-[2px] flex justify-center bg-n-white text-n-black text-11px uppercase rounded"
@@ -209,7 +222,7 @@ const setDates = () => {};
             </div>
           </div>
 
-          <div @click="goToGame(56)" class="text-white">
+          <div @click="goToGame(56)" class="text-white cursor-pointer">
             <i class="fa fa-chevron-right font-thin"></i>
           </div>
         </div>
@@ -245,11 +258,17 @@ const setDates = () => {};
               <p class="text-11px text-center font-thin">FT</p>
             </div>
             <div class="grid gap-1">
-              <div class="flex items-center gap-2">
+              <div
+                @click="goToGame(56)"
+                class="flex items-center gap-2 cursor-pointer"
+              >
                 <img :src="fixture.homeFlag" alt="" class="w-5 h-5" />
                 <p class="text-sm">{{ fixture.homeTeam }}</p>
               </div>
-              <div class="flex items-center gap-2">
+              <div
+                @click="goToGame(56)"
+                class="flex items-center gap-2 cursor-pointer"
+              >
                 <img :src="fixture.awayFlag" alt="" class="w-5 h-5" />
                 <p class="text-sm">{{ fixture.awayTeam }}</p>
               </div>
@@ -263,7 +282,17 @@ const setDates = () => {};
               <p class="text-n-white text-sm">{{ fixture.homeScore }}</p>
               <p class="text-n-white text-sm">{{ fixture.awayScore }}</p>
             </div>
-            <i class="fa fa-star-o"></i>
+          </div>
+          <div
+            @click="fixture.markAsFavourite = !fixture.markAsFavourite"
+            class="cursor-pointer"
+            :class="`${
+              fixture.markAsFavourite ? 'text-n-orange' : 'text-n-white'
+            }`"
+          >
+            <i
+              :class="`fa fa-${fixture.markAsFavourite ? 'star ' : 'star-o'}`"
+            ></i>
           </div>
         </div>
       </div>
