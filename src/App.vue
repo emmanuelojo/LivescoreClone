@@ -4,7 +4,7 @@ import TopNavbar from "./components/TopNavbar.vue";
 </script>
 
 <template>
-  <div class="bg-n-black h-screen overflow-auto">
+  <div class="bg-n-black h-screen overflow-auto hide-scrollbar">
     <TopNavbar />
     <router-view />
     <BottomNavbar />

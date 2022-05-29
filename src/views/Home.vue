@@ -15,10 +15,13 @@ const gameFixtures = [
   {
     league: "Premier League",
     country: "England",
+    flagUrl: "https://static.livescore.com/i2/fh/england.jpg",
     fixtures: [
       {
         homeTeam: "Liverpool",
         awayTeam: "Manchester City",
+        homeFlag: "https://lsm-static-prod.livescore.com/medium/enet/8650.png",
+        awayFlag: "https://lsm-static-prod.livescore.com/medium/enet/8456.png",
         game: "Premier League",
         homeScore: 1,
         awayScore: 2,
@@ -29,6 +32,8 @@ const gameFixtures = [
       {
         homeTeam: "Chelsea",
         awayTeam: "Arsenal",
+        homeFlag: "https://lsm-static-prod.livescore.com/medium/enet/8455.png",
+        awayFlag: "https://lsm-static-prod.livescore.com/medium/enet/9825.png",
         game: "FA Cup",
         homeScore: 1,
         awayScore: 2,
@@ -41,10 +46,13 @@ const gameFixtures = [
   {
     league: "La Liga Santander",
     country: "Spain",
+    flagUrl: "https://static.livescore.com/i2/fh/spain.jpg",
     fixtures: [
       {
         homeTeam: "Barcelona",
         awayTeam: "Real Madrid",
+        homeFlag: "https://lsm-static-prod.livescore.com/medium/enet/8634.png",
+        awayFlag: "https://lsm-static-prod.livescore.com/medium/enet/8633.png",
         game: "El Classico",
         homeScore: 2,
         awayScore: 2,
@@ -55,6 +63,9 @@ const gameFixtures = [
       {
         homeTeam: "Athletico Madrid",
         awayTeam: "Villareal",
+
+        homeFlag: "https://lsm-static-prod.livescore.com/medium/enet/9906.png",
+        awayFlag: "https://lsm-static-prod.livescore.com/medium/enet/10205.png",
         game: "La Liga",
         homeScore: 1,
         awayScore: 2,
@@ -67,10 +78,14 @@ const gameFixtures = [
   {
     league: "Seria A",
     country: "Italy",
+    flagUrl: "https://static.livescore.com/i2/fh/italy.jpg",
     fixtures: [
       {
         homeTeam: "Juventus",
         awayTeam: "AC Milan",
+
+        homeFlag: "https://lsm-static-prod.livescore.com/medium/enet/9885.png",
+        awayFlag: "https://lsm-static-prod.livescore.com/medium/enet/8564.png",
         game: "League",
         homeScore: 1,
         awayScore: 2,
@@ -82,6 +97,9 @@ const gameFixtures = [
       {
         homeTeam: "Inter Milan",
         awayTeam: "Napoli",
+
+        homeFlag: "https://lsm-static-prod.livescore.com/medium/enet/8636.png",
+        awayFlag: "https://lsm-static-prod.livescore.com/medium/enet/9875.png",
         game: "Ligue Cup",
         homeScore: 0,
         awayScore: 0,
@@ -114,38 +132,42 @@ setInterval(() => {
 const goToGame = (id: number) => {
   router.push(`/games/${id}`);
 };
+
+const setDates = () => {};
 </script>
 
 <template>
-  <div class="text-n-white">
+  <div class="text-pry">
     <div class="px-2.5 flex justify-between items-center">
       <p
-        class="w-10 py-[2px] flex justify-center bg-n-white text-n-black text-11px uppercase rounded"
+        class="font-bold w-10 py-[2px] flex justify-center bg-n-white text-n-black text-11px uppercase rounded"
       >
         Live
       </p>
 
       <div>
-        <p class="flex justify-center text-11px uppercase">Wed</p>
-        <p class="text-9px uppercase">18 may</p>
+        <p class="font-bold flex justify-center text-11px uppercase">Wed</p>
+        <p class="font-bold text-9px uppercase">18 may</p>
       </div>
       <div>
-        <p class="flex justify-center text-11px uppercase">thu</p>
-        <p class="text-9px uppercase">19 may</p>
+        <p class="font-bold flex justify-center text-11px uppercase">thu</p>
+        <p class="font-bold text-9px uppercase">19 may</p>
       </div>
-      <div class="">
-        <p class="flex justify-center text-11px uppercase text-n-orange">
+      <div class="font-bold">
+        <p
+          class="font-bold flex justify-center text-11px uppercase text-n-orange"
+        >
           today
         </p>
-        <p class="text-9px uppercase text-n-orange">20 may</p>
+        <p class="font-bold text-9px uppercase text-n-orange">20 may</p>
       </div>
       <div>
-        <p class="flex justify-center text-11px uppercase">sat</p>
-        <p class="text-9px uppercase">21 may</p>
+        <p class="font-bold flex justify-center text-11px uppercase">sat</p>
+        <p class="font-bold text-9px uppercase">21 may</p>
       </div>
       <div>
-        <p class="flex justify-center text-11px uppercase">sun</p>
-        <p class="text-9px uppercase">22 may</p>
+        <p class="font-bold flex justify-center text-11px uppercase">sun</p>
+        <p class="font-bold text-9px uppercase">22 may</p>
       </div>
       <div
         @mouseover="showCalendar = true"
@@ -170,78 +192,19 @@ const goToGame = (id: number) => {
     </div>
 
     <div class="px-2.5">
-      <!-- <div v-for="i in 2" class="grid mb-2">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center gap-2 mb-2">
-            <img src="../assets/logo.png" alt="" class="w-5 h-5" />
-
-            <div class="grid">
-              <p class="capitalize text-sm font-semibold">Premier League</p>
-              <p class="capitalize text-11px text-pry">England</p>
-            </div>
-          </div>
-
-          <div @click="goToGame(56)" class="text-white">
-            <i class="fa fa-chevron-right font-thin"></i>
-          </div>
-        </div>
-
-        <div
-          class="bg-n-bg-gray rounded-lg px-[5px] py-2 flex justify-between items-center"
-        >
-          <div class="flex gap-2">
-            <div v-if="gameStatus === 'NotStarted'" class="grid gap-[6px]">
-              <div class="flex items-center">
-                <i class="fa fa-play border border-white rounded"></i>
-                <p class="ml-1 text-11px">Bet</p>
-              </div>
-              <p class="text-11px text-center font-thin">16:30</p>
-            </div>
-            <div
-              v-else-if="gameStatus === 'Started'"
-              class="flex justify-center items-center relative"
-            >
-              <div
-                class="absolute -left-[6px] rounded-tr-xl rounded-br-xl w-1 h-full bg-n-orange"
-              ></div>
-              <p class="ml-1 text-11px text-center font-thin text-n-orange">
-                80'
-              </p>
-            </div>
-            <div v-else class="flex justify-center items-center">
-              <p class="text-11px text-center font-thin">FT</p>
-            </div>
-            <div>
-              <div class="flex items-center gap-2">
-                <img src="../assets/logo.png" alt="" class="w-5 h-5" />
-                <p class="text-sm">Liverpool</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <img src="../assets/logo.png" alt="" class="w-5 h-5" />
-                <p class="text-sm">Manchester City</p>
-              </div>
-            </div>
-          </div>
-          <div class="flex items-center gap-2">
-            <div
-              v-if="gameStatus === 'Started' || 'Ended'"
-              class="flex flex-col"
-            >
-              <p class="text-n-white text-sm">{{ homeScore }}</p>
-              <p class="text-n-white text-sm">{{ awayScore }}</p>
-            </div>
-            <i class="fa fa-star-o"></i>
-          </div>
-        </div>
-      </div> -->
-
       <div v-for="(match, idx) in gameFixtures" :key="idx" class="grid mb-2">
         <div class="flex justify-between items-center">
           <div class="flex items-center gap-2 mb-2">
-            <img src="../assets/logo.png" alt="" class="w-5 h-5" />
+            <img
+              :src="match.flagUrl"
+              :alt="`${match.country + ' Logo'}`"
+              class="w-5 h-3"
+            />
 
             <div class="grid">
-              <p class="capitalize text-sm font-semibold">{{ match.league }}</p>
+              <p class="capitalize text-sm font-bold text-n-white">
+                {{ match.league }}
+              </p>
               <p class="capitalize text-11px text-pry">{{ match.country }}</p>
             </div>
           </div>
@@ -254,12 +217,12 @@ const goToGame = (id: number) => {
         <div
           v-for="(fixture, idx) in match.fixtures"
           :key="idx"
-          class="mb-3 bg-n-bg-gray rounded-lg px-[5px] py-2 flex justify-between items-center"
+          class="mb-3 bg-n-bg-gray rounded-lg p-3 flex justify-between items-center"
         >
           <div class="flex gap-2">
             <div
               v-if="fixture.hasStarted === false && fixture.hasEnded === false"
-              class="grid gap-[6px]"
+              class="grid gap-[6px] w-10"
             >
               <div class="flex items-center">
                 <i class="fa fa-play border border-white rounded"></i>
@@ -269,34 +232,34 @@ const goToGame = (id: number) => {
             </div>
             <div
               v-else-if="fixture.hasEnded === false"
-              class="flex justify-center items-center relative"
+              class="flex justify-center items-center relative w-10"
             >
               <div
-                class="absolute -left-[6px] rounded-tr-xl rounded-br-xl w-1 h-full bg-n-orange"
+                class="absolute -left-[10px] rounded-tr-xl rounded-br-xl w-1 h-full bg-n-orange"
               ></div>
-              <p class="ml-1 text-11px text-center font-thin text-n-orange">
+              <p class="text-11px text-center font-thin text-n-orange">
                 {{ fixture.time }}
               </p>
             </div>
-            <div v-else class="flex justify-center items-center">
+            <div v-else class="flex justify-center items-center w-10">
               <p class="text-11px text-center font-thin">FT</p>
             </div>
-            <div>
+            <div class="grid gap-1">
               <div class="flex items-center gap-2">
-                <img src="../assets/logo.png" alt="" class="w-5 h-5" />
+                <img :src="fixture.homeFlag" alt="" class="w-5 h-5" />
                 <p class="text-sm">{{ fixture.homeTeam }}</p>
               </div>
               <div class="flex items-center gap-2">
-                <img src="../assets/logo.png" alt="" class="w-5 h-5" />
+                <img :src="fixture.awayFlag" alt="" class="w-5 h-5" />
                 <p class="text-sm">{{ fixture.awayTeam }}</p>
               </div>
             </div>
           </div>
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-3">
             <div
-              v-if="gameStatus === 'Started' || 'Ended'"
-              class="flex flex-col"
-            >
+              v-if="fixture.hasStarted === false && fixture.hasEnded === false"
+            ></div>
+            <div v-else class="flex flex-col gap-1">
               <p class="text-n-white text-sm">{{ fixture.homeScore }}</p>
               <p class="text-n-white text-sm">{{ fixture.awayScore }}</p>
             </div>

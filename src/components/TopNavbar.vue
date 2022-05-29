@@ -36,13 +36,13 @@ const activeTab = ref("Football");
     </div>
   </nav>
 
-  <div class="md:mt-4 px-2.5 flex items-center overflow-auto">
+  <div class="hide-scrollbar md:mt-4 px-2.5 flex items-center overflow-auto">
     <router-link
       v-for="(tab, idx) in tabs"
       :key="idx"
       :to="{ name: tab.linkName }"
       ><p
-        class="px-3 py-[3px] mr-3 mb-5 rounded-xl text-sm font-semibold flex justify-center items-center"
+        class="px-3 py-[3px] mr-3 mb-5 rounded-xl text-sm font-bold flex justify-center items-center"
         :class="
           activeTab === tab.name
             ? 'bg-n-white text-n-black'

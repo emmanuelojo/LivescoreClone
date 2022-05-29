@@ -5,7 +5,11 @@
     <div class="my-4 py-1 px-[6px] bg-n-blue text-n-white rounded-md">
       <div class="flex justify-between items-center">
         <div class="flex items-center">
-          <img src="../assets/logo.png" alt="logo" class="w-10 h-10" />
+          <img
+            src="https://www.livescore.com/ls-web-assets/svgs/common/ls-bet-icon-c1a591cb403d151cb7dd7ca2b40413a6.svg"
+            alt="logo"
+            class="w-[30px] h-[30px]"
+          />
           <p class="ml-1 text-sm leading-none">
             N125,000 welcome bonus for safe and secure betting!*
           </p>

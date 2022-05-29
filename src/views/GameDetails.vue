@@ -23,7 +23,7 @@ const H2HTabs = ["H2H", "Team A", "Team B"];
 const leagueTable = [
   {
     team: "Manchester City",
-    teamLogo: "",
+    teamLogo: "https://lsm-static-prod.livescore.com/medium/enet/8456.png",
     matchesPlayed: 37,
     matchesWon: 28,
     matchesDrawn: 5,
@@ -35,7 +35,7 @@ const leagueTable = [
   },
   {
     team: "Liverpool",
-    teamLogo: "",
+    teamLogo: "https://lsm-static-prod.livescore.com/medium/enet/8650.png",
     matchesPlayed: 36,
     matchesWon: 26,
     matchesDrawn: 8,
@@ -47,7 +47,7 @@ const leagueTable = [
   },
   {
     team: "Chelsea",
-    teamLogo: "",
+    teamLogo: "https://lsm-static-prod.livescore.com/medium/enet/8455.png",
     matchesPlayed: 36,
     matchesWon: 20,
     matchesDrawn: 10,
@@ -59,7 +59,7 @@ const leagueTable = [
   },
   {
     team: "Tottenham Hotspur",
-    teamLogo: "",
+    teamLogo: "https://lsm-static-prod.livescore.com/medium/enet/8586.png",
     matchesPlayed: 37,
     matchesWon: 21,
     matchesDrawn: 5,
@@ -71,7 +71,7 @@ const leagueTable = [
   },
   {
     team: "Arsenal",
-    teamLogo: "",
+    teamLogo: "https://lsm-static-prod.livescore.com/medium/enet/9825.png",
     matchesPlayed: 37,
     matchesWon: 21,
     matchesDrawn: 3,
@@ -83,7 +83,7 @@ const leagueTable = [
   },
   {
     team: "West Ham United",
-    teamLogo: "",
+    teamLogo: "https://lsm-static-prod.livescore.com/medium/enet/8654.png",
     matchesPlayed: 37,
     matchesWon: 28,
     matchesDrawn: 5,
@@ -95,7 +95,7 @@ const leagueTable = [
   },
   {
     team: "Manchester United",
-    teamLogo: "",
+    teamLogo: "https://lsm-static-prod.livescore.com/medium/enet/10260.png",
     matchesPlayed: 37,
     matchesWon: 28,
     matchesDrawn: 5,
@@ -107,7 +107,7 @@ const leagueTable = [
   },
   {
     team: "Brighton & Hove Albion",
-    teamLogo: "",
+    teamLogo: "https://lsm-static-prod.livescore.com/medium/enet/10204.png",
     matchesPlayed: 37,
     matchesWon: 28,
     matchesDrawn: 5,
@@ -119,7 +119,7 @@ const leagueTable = [
   },
   {
     team: "Wolverhampton Wanderers",
-    teamLogo: "",
+    teamLogo: "https://lsm-static-prod.livescore.com/medium/enet/8602.png",
     matchesPlayed: 37,
     matchesWon: 28,
     matchesDrawn: 5,
@@ -131,7 +131,7 @@ const leagueTable = [
   },
   {
     team: "Leicester City",
-    teamLogo: "",
+    teamLogo: "https://lsm-static-prod.livescore.com/medium/enet/8197.png",
     matchesPlayed: 36,
     matchesWon: 28,
     matchesDrawn: 5,
@@ -215,7 +215,7 @@ const leagueTable = [
   },
   {
     team: "Burnley",
-    teamLogo: "",
+    teamLogo: "https://lsm-static-prod.livescore.com/medium/enet/8191.png",
     matchesPlayed: 36,
     matchesWon: 28,
     matchesDrawn: 5,
@@ -227,7 +227,7 @@ const leagueTable = [
   },
   {
     team: "Leeds United",
-    teamLogo: "",
+    teamLogo: "https://lsm-static-prod.livescore.com/medium/enet/8463.png",
     matchesPlayed: 37,
     matchesWon: 28,
     matchesDrawn: 5,
@@ -239,7 +239,7 @@ const leagueTable = [
   },
   {
     team: "Norwich City",
-    teamLogo: "",
+    teamLogo: "https://lsm-static-prod.livescore.com/medium/enet/9850.png",
     matchesPlayed: 37,
     matchesWon: 28,
     matchesDrawn: 5,
@@ -251,7 +251,7 @@ const leagueTable = [
   },
   {
     team: "Watford",
-    teamLogo: "",
+    teamLogo: "https://lsm-static-prod.livescore.com/medium/enet/9817.png",
     matchesPlayed: 37,
     matchesWon: 28,
     matchesDrawn: 5,
@@ -267,7 +267,10 @@ const h2hGames = [
   {
     homeTeam: "Liverpool",
     awayTeam: "Manchester City",
+    homeFlag: "https://lsm-static-prod.livescore.com/medium/enet/8650.png",
+    awayFlag: "https://lsm-static-prod.livescore.com/medium/enet/8456.png",
     game: "Premier League",
+    leagueFlag: "https://static.livescore.com/i2/fh/england.jpg",
     year: 2021,
     homeScore: 1,
     awayScore: 2,
@@ -276,7 +279,10 @@ const h2hGames = [
   {
     homeTeam: "Liverpool",
     awayTeam: "Manchester City",
+    homeFlag: "https://lsm-static-prod.livescore.com/medium/enet/8650.png",
+    awayFlag: "https://lsm-static-prod.livescore.com/medium/enet/8456.png",
     game: "Premier League 20/21",
+    leagueFlag: "https://static.livescore.com/i2/fh/england.jpg",
     year: 2021,
     homeScore: 3,
     awayScore: 2,
@@ -285,7 +291,10 @@ const h2hGames = [
   {
     homeTeam: "Liverpool",
     awayTeam: "Manchester City",
+    homeFlag: "https://lsm-static-prod.livescore.com/medium/enet/8650.png",
+    awayFlag: "https://lsm-static-prod.livescore.com/medium/enet/8456.png",
     game: "FA Cup",
+    leagueFlag: "https://static.livescore.com/i2/fh/england.jpg",
     year: 2021,
     homeScore: 2,
     awayScore: 2,
@@ -294,7 +303,10 @@ const h2hGames = [
   {
     homeTeam: "Liverpool",
     awayTeam: "Manchester City",
+    homeFlag: "https://lsm-static-prod.livescore.com/medium/enet/8650.png",
+    awayFlag: "https://lsm-static-prod.livescore.com/medium/enet/8456.png",
     game: "Champions League",
+    leagueFlag: "https://static.livescore.com/i2/fh/champions-league.jpg",
     year: 2020,
     homeScore: 1,
     awayScore: 3,
@@ -303,7 +315,10 @@ const h2hGames = [
   {
     homeTeam: "Liverpool",
     awayTeam: "Manchester City",
+    homeFlag: "https://lsm-static-prod.livescore.com/medium/enet/8650.png",
+    awayFlag: "https://lsm-static-prod.livescore.com/medium/enet/8456.png",
     game: "Premier League 19/19",
+    leagueFlag: "https://static.livescore.com/i2/fh/england.jpg",
     year: 2019,
     homeScore: 0,
     awayScore: 0,
@@ -348,10 +363,14 @@ setInterval(() => {
   <div class="text-n-white py-1">
     <div class="px-2.5 mb-2 flex justify-between items-center">
       <div class="flex items-center gap-2 mb-2">
-        <img src="../assets/logo.png" alt="" class="w-5 h-5" />
+        <img
+          src="https://static.livescore.com/i2/fh/england.jpg"
+          alt=""
+          class="w-5 h-3"
+        />
 
         <div class="grid">
-          <p class="capitalize text-sm font-semibold">Premier League</p>
+          <p class="capitalize text-sm font-bold">Premier League</p>
           <p class="capitalize text-11px text-pry">England</p>
         </div>
       </div>
@@ -369,9 +388,9 @@ setInterval(() => {
     </div>
 
     <div
-      class="mx-2.5 py-1 relative flex justify-center items-center bg-n-bg-gray rounded-lg"
+      class="mx-2.5 h-20 py-3 relative flex justify-center items-center bg-n-bg-gray rounded-lg"
     >
-      <div v-if="gameStatus === 'NotStarted'" class="grid gap-[6px] mr-10">
+      <div v-if="gameStatus === 'NotStarted'" class="grid gap-[6px] mr-10 w-10">
         <div class="flex items-center">
           <i class="fa fa-play border border-n-white rounded"></i>
           <p class="ml-1 text-11px">Bet</p>
@@ -380,7 +399,7 @@ setInterval(() => {
       </div>
       <div
         v-else-if="gameStatus === 'Started'"
-        class="flex justify-center items-center"
+        class="flex justify-center items-center w-10 mr-10"
       >
         <div
           class="absolute top-[5px] bottom-[5px] left-0 rounded-tr-xl rounded-br-xl w-1 bg-n-orange"
@@ -391,25 +410,33 @@ setInterval(() => {
           80'
         </p>
       </div>
-      <div v-else class="mr-10 flex justify-center items-center">
+      <div v-else class="mr-10 flex justify-center items-center w-10">
         <p class="text-11px text-center font-thin">FT</p>
       </div>
 
-      <div class="flex justify-between items-center gap-10">
-        <div class="flex flex-col justify-center">
-          <img src="../assets/logo.png" alt="" class="w-5 h-5 mx-auto" />
+      <div class="flex justify-between items-center gap-10 w-64">
+        <div class="flex flex-col justify-center gap-3">
+          <img
+            src="https://lsm-static-prod.livescore.com/medium/enet/8650.png"
+            alt=""
+            class="w-6 h-6 mx-auto"
+          />
 
           <p class="text-11px text-center">Liverpool</p>
         </div>
 
         <div>
-          <p class="flex items-center gap-1 font-semibold">
+          <p class="text-[22px] flex items-center gap-1 font-bold">
             <span> {{ homeScore }}</span> - <span> {{ awayScore }}</span>
           </p>
         </div>
 
-        <div class="flex flex-col justify-center">
-          <img src="../assets/logo.png" alt="" class="w-5 h-5 mx-auto" />
+        <div class="flex flex-col justify-center gap-3">
+          <img
+            src="https://lsm-static-prod.livescore.com/medium/enet/8456.png"
+            alt=""
+            class="w-6 h-6 mx-auto"
+          />
 
           <p class="text-11px text-center">Manchester City</p>
         </div>
@@ -422,7 +449,7 @@ setInterval(() => {
           @click="activeTab = tab"
           v-for="(tab, idx) in tabs"
           :key="idx"
-          class="text-11px font-semibold cursor-pointer"
+          class="text-sm font-bold cursor-pointer"
           :class="tab === activeTab ? 'text-n-orange' : 'text-pry'"
         >
           {{ tab }}
@@ -436,21 +463,21 @@ setInterval(() => {
       <p class="uppercase text-11px">Match Info</p>
 
       <div class="mt-2 border-n-bg-gray border rounded-md">
-        <div class="p-2 flex gap-3 border-n-bg-gray border-b">
+        <div class="px-2 py-3 flex gap-3 border-n-bg-gray border-b">
           <i class="fa fa-calendar"></i>
           <div>
             <p class="capitalize text-11px">15 May 2022</p>
             <p class="capitalize text-9px">Date</p>
           </div>
         </div>
-        <div class="p-2 flex gap-3 border-n-bg-gray border-b">
+        <div class="px-2 py-3 flex gap-3 border-n-bg-gray border-b">
           <i class="fa fa-whistle"></i>
           <div>
             <p class="capitalize text-11px">Chris Kavanagh (England)</p>
             <p class="capitalize text-9px">referee</p>
           </div>
         </div>
-        <div class="p-2 flex gap-3">
+        <div class="px-2 py-3 flex gap-3">
           <i class="fa fa-stadium"></i>
           <div>
             <p class="capitalize text-11px">Villa Park</p>
@@ -459,7 +486,7 @@ setInterval(() => {
         </div>
       </div>
 
-      <p class="mt-2 text-11px uppercase font-semibold">who will win?</p>
+      <p class="mt-2 text-11px uppercase font-bold">who will win?</p>
     </div>
 
     <div v-if="activeTab === 'Summary'" class="mx-2.5 text-pry">
@@ -484,7 +511,7 @@ setInterval(() => {
         class="mx-1 border border-n-bg-gray rounded-md"
       >
         <div
-          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+          class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
           <p class="mr-2 text-py text-11px">12'</p>
           <div class="text-11px flex items-center">
@@ -493,7 +520,7 @@ setInterval(() => {
           </div>
         </div>
         <div
-          class="p-2 flex justify-between items-center border-n-bg-gray border-b"
+          class="px-2 py-3 flex justify-between items-center border-n-bg-gray border-b"
         >
           <p class="mr-2 text-pry text-11px">30'</p>
           <div class="text-11px flex items-center">
@@ -502,7 +529,7 @@ setInterval(() => {
           </div>
         </div>
         <div
-          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+          class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
           <p class="mr-2 text-py text-11px">12'</p>
           <div class="text-11px flex items-center">
@@ -511,7 +538,7 @@ setInterval(() => {
           </div>
         </div>
         <div
-          class="p-2 flex justify-between items-center border-n-bg-gray border-b"
+          class="px-2 py-3 flex justify-between items-center border-n-bg-gray border-b"
         >
           <p class="mr-2 text-pry text-11px">30'</p>
           <div class="text-11px flex items-center">
@@ -520,7 +547,7 @@ setInterval(() => {
           </div>
         </div>
         <div
-          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+          class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
           <p class="mr-2 text-py text-11px">12'</p>
           <div class="text-11px flex items-center">
@@ -529,7 +556,7 @@ setInterval(() => {
           </div>
         </div>
         <div
-          class="p-2 flex justify-between items-center border-n-bg-gray border-b"
+          class="px-2 py-3 flex justify-between items-center border-n-bg-gray border-b"
         >
           <p class="mr-2 text-pry text-11px">30'</p>
           <div class="text-11px flex items-center">
@@ -538,7 +565,7 @@ setInterval(() => {
           </div>
         </div>
         <div
-          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+          class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
           <p class="mr-2 text-py text-11px">12'</p>
           <div class="text-11px flex items-center">
@@ -547,7 +574,7 @@ setInterval(() => {
           </div>
         </div>
         <div
-          class="p-2 flex justify-between items-center border-n-bg-gray border-b"
+          class="px-2 py-3 flex justify-between items-center border-n-bg-gray border-b"
         >
           <p class="mr-2 text-pry text-11px">30'</p>
           <div class="text-11px flex items-center">
@@ -559,7 +586,7 @@ setInterval(() => {
 
       <div v-else class="mx-1 border border-n-bg-gray rounded-md">
         <div
-          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+          class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
           <p class="mr-2 text-pry text-11px">1'</p>
           <p class="text-pry text-11px">
@@ -567,7 +594,7 @@ setInterval(() => {
           </p>
         </div>
         <div
-          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+          class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
           <p class="mr-2 text-pry text-11px">3'</p>
           <p class="text-pry text-11px">
@@ -575,7 +602,7 @@ setInterval(() => {
           </p>
         </div>
         <div
-          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+          class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
           <p class="mr-2 text-pry text-11px">6'</p>
           <p class="text-pry text-11px">
@@ -584,7 +611,7 @@ setInterval(() => {
         </div>
 
         <div
-          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+          class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
           <p class="mr-2 text-pry text-11px">9'</p>
           <p class="text-pry text-11px">
@@ -592,26 +619,26 @@ setInterval(() => {
           </p>
         </div>
         <div
-          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+          class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
           <p class="mr-2 text-pry text-11px">23'</p>
           <p class="text-pry text-11px">
             Sadio Mane hits the ball towards goal
           </p>
         </div>
-        <div class="p-2 flex items-center border-n-bg-gray border-b">
+        <div class="px-2 py-3 flex items-center border-n-bg-gray border-b">
           <p class="mr-2 text-pry text-11px">34'</p>
           <p class="text-pry text-11px">
             The goalkeeper plays a long ball to Gabriel Jesus
           </p>
         </div>
-        <div class="p-2 flex items-center border-n-bg-gray border-b">
+        <div class="px-2 py-3 flex items-center border-n-bg-gray border-b">
           <p class="mr-2 text-pry text-11px">38'</p>
           <p class="text-pry text-11px">
             Liverpool mounting pressure on City's defenders
           </p>
         </div>
-        <div class="p-2 flex items-center border-n-bg-gray border-b">
+        <div class="px-2 py-3 flex items-center border-n-bg-gray border-b">
           <p class="mr-2 text-pry text-11px">40'</p>
           <p class="text-pry text-11px">
             A brilliant clearancefrom Walker to give Manchester City a sigh of
@@ -619,14 +646,14 @@ setInterval(() => {
           </p>
         </div>
         <div
-          class="p-2 flex justify-start items-center border-n-bg-gray border-b"
+          class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
           <p class="mr-2 text-pry text-11px">45+2'</p>
           <p class="text-pry text-11px">
             It's over! The referee blows for halftime
           </p>
         </div>
-        <div class="p-2 flex items-center border-n-bg-gray border-b">
+        <div class="px-2 py-3 flex items-center border-n-bg-gray border-b">
           <p class="mr-2 text-pry text-11px">45+2'</p>
           <p class="text-pry text-11px">
             Ball possession: Liverpool: 51%, Manchester City: 49%
@@ -914,25 +941,33 @@ setInterval(() => {
       <p class="uppercase text-11px">substitute players</p>
 
       <div class="mt-2 border-n-bg-gray border rounded-md">
-        <div class="p-2 flex justify-around gap-3 border-n-bg-gray border-b">
+        <div
+          class="px-2 py-3 flex justify-around gap-3 border-n-bg-gray border-b"
+        >
           <p class="capitalize text-11px">Sub 1</p>
           <p class="capitalize text-11px">Sub 1</p>
         </div>
-        <div class="p-2 flex justify-around gap-3 border-n-bg-gray border-b">
+        <div
+          class="px-2 py-3 flex justify-around gap-3 border-n-bg-gray border-b"
+        >
           <p class="capitalize text-11px">Sub 2</p>
           <p class="capitalize text-11px">Sub 2</p>
         </div>
-        <div class="p-2 flex justify-around gap-3 border-n-bg-gray border-b">
+        <div
+          class="px-2 py-3 flex justify-around gap-3 border-n-bg-gray border-b"
+        >
           <p class="capitalize text-11px">Sub 3</p>
           <p class="capitalize text-11px">Sub 3</p>
         </div>
 
-        <div class="p-2 flex justify-around gap-3 border-n-bg-gray border-b">
+        <div
+          class="px-2 py-3 flex justify-around gap-3 border-n-bg-gray border-b"
+        >
           <p class="capitalize text-11px">Sub 4</p>
           <p class="capitalize text-11px">Sub 4</p>
         </div>
 
-        <div class="p-2 flex justify-around gap-3">
+        <div class="px-2 py-3 flex justify-around gap-3">
           <p class="capitalize text-11px">Sub 5</p>
           <p class="capitalize text-11px">Sub 5</p>
         </div>
@@ -941,7 +976,7 @@ setInterval(() => {
       <p class="mt-3 uppercase text-11px">Coaches</p>
 
       <div class="mt-2 border-n-bg-gray border rounded-md">
-        <div class="p-2 flex justify-around gap-3">
+        <div class="px-2 py-3 flex justify-around gap-3">
           <p class="capitalize text-11px">Jurgen Klopp</p>
           <p class="capitalize text-11px">Pep Guadiola</p>
         </div>
@@ -1046,11 +1081,7 @@ setInterval(() => {
               <td class="text-left px-1 w-2/3 sm:w-[300px] text-xxs capitalize">
                 <div class="flex items-center gap-1 text-n-white">
                   <span>
-                    <img
-                      src="../assets/logo.png"
-                      alt="Team Logo"
-                      class="w-5 h-5"
-                    />
+                    <img :src="club.teamLogo" class="w-5 h-5" />
                   </span>
                   <span>
                     {{ club.team }}
@@ -1099,7 +1130,7 @@ setInterval(() => {
       </div>
 
       <div
-        class="mt-3 bg-n-bg-gray rounded-md p-1 text-pry flex justify-center items-center relative"
+        class="mt-3 bg-n-bg-gray rounded-md p-1 text-pry flex justify-center items-center relative sm:hidden"
       >
         <span class="absolute left-1"> <i class="fa fa-refresh"></i></span>
 
@@ -1147,35 +1178,37 @@ setInterval(() => {
 
       <div v-for="(game, idx) in h2hGames" :key="idx" class="mt-2">
         <div class="flex items-center gap-2 mb-2">
-          <img src="../assets/logo.png" alt="" class="w-5 h-5" />
+          <img :src="game.leagueFlag" alt="" class="w-5 h-3" />
 
           <div class="grid">
-            <p class="capitalize text-sm font-semibold">{{ game.game }}</p>
+            <p class="capitalize text-sm font-bold">{{ game.game }}</p>
             <p class="capitalize text-11px text-pry">{{ game.venue }}</p>
           </div>
         </div>
 
         <div
-          class="bg-n-bg-gray rounded-lg px-[5px] py-2 flex justify-between items-center"
+          class="bg-n-bg-gray rounded-lg p-3 flex justify-between items-center"
         >
           <div class="flex gap-2">
             <div class="grid gap-2">
-              <p class="text-xxs text-center font-thin">{{ game.year }}</p>
-              <p class="text-11px text-center font-thin">FT</p>
+              <p class="text-xxs text-center text-pry font-thin">
+                {{ game.year }}
+              </p>
+              <p class="text-11px text-center text-pry font-thin">FT</p>
             </div>
-            <div>
+            <div class="grid gap-1">
               <div class="flex items-center gap-2">
-                <img src="../assets/logo.png" alt="" class="w-5 h-5" />
-                <p class="text-sm">{{ game.homeTeam }}</p>
+                <img :src="game.homeFlag" alt="" class="w-5 h-5" />
+                <p class="text-sm text-pry">{{ game.homeTeam }}</p>
               </div>
               <div class="flex items-center gap-2">
-                <img src="../assets/logo.png" alt="" class="w-5 h-5" />
-                <p class="text-sm">{{ game.awayTeam }}</p>
+                <img :src="game.awayFlag" alt="" class="w-5 h-5" />
+                <p class="text-sm text-pry">{{ game.awayTeam }}</p>
               </div>
             </div>
           </div>
           <div class="flex items-center">
-            <div class="flex flex-col">
+            <div class="flex flex-col gap-2">
               <p class="text-n-white text-sm">{{ game.homeScore }}</p>
               <p class="text-n-white text-sm">{{ game.awayScore }}</p>
             </div>
