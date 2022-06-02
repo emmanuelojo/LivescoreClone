@@ -1,13 +1,16 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import GetBonus from "../components/GetBonus.vue";
 import router from "../router";
 import { getRandomScore } from "../utils/helpers";
 
+onMounted(() => {
+  liveGame;
+});
+
 const homeScore = ref<number>();
 const awayScore = ref<number>();
 const gameStatus = ref("NotStarted");
-const canBet = ref(true);
 const showCalendar = ref(false);
 const gameDate = ref(new Date().toISOString().split("T")[0]);
 
@@ -38,7 +41,7 @@ const gameFixtures = ref([
         game: "FA Cup",
         homeScore: 1,
         awayScore: 2,
-        time: "30'",
+        time: 2,
         hasStarted: true,
         hasEnded: false,
         markAsFavourite: false,
@@ -107,7 +110,7 @@ const gameFixtures = ref([
         game: "Ligue Cup",
         homeScore: 0,
         awayScore: 0,
-        time: "11",
+        time: 5,
         hasStarted: true,
         hasEnded: false,
         markAsFavourite: false,
@@ -116,13 +119,14 @@ const gameFixtures = ref([
   },
 ]);
 
-setInterval(() => {
-  //  gameFixtures.value.forEach((fixture, idx) => {
-  // fixture[idx].fixtures = fixture.fixtures.map((game) => {
-  //   return { ...game, time++ }
-  // })
-  // })
-}, 5000);
+const liveGame = setInterval(() => {
+  gameFixtures.value.forEach((fixture, idx) => {
+    fixture.fixtures.map((game) => {
+      typeof game.time === "number" && game.time < 90 ? game.time++ : game.time;
+      return { ...game };
+    });
+  });
+}, 15000);
 
 setInterval(() => {
   homeScore.value = getRandomScore(6);
@@ -158,15 +162,15 @@ const setDates = () => {};
         Live
       </p>
 
-      <div>
+      <div class="cursor-pointer">
         <p class="font-bold flex justify-center text-11px uppercase">Wed</p>
         <p class="font-bold text-9px uppercase">18 may</p>
       </div>
-      <div>
+      <div class="cursor-pointer">
         <p class="font-bold flex justify-center text-11px uppercase">thu</p>
         <p class="font-bold text-9px uppercase">19 may</p>
       </div>
-      <div class="font-bold">
+      <div class="font-bold cursor-pointer">
         <p
           class="font-bold flex justify-center text-11px uppercase text-n-orange"
         >
@@ -174,18 +178,18 @@ const setDates = () => {};
         </p>
         <p class="font-bold text-9px uppercase text-n-orange">20 may</p>
       </div>
-      <div>
+      <div class="cursor-pointer">
         <p class="font-bold flex justify-center text-11px uppercase">sat</p>
         <p class="font-bold text-9px uppercase">21 may</p>
       </div>
-      <div>
+      <div class="cursor-pointer">
         <p class="font-bold flex justify-center text-11px uppercase">sun</p>
         <p class="font-bold text-9px uppercase">22 may</p>
       </div>
       <div
         @mouseover="showCalendar = true"
         @mouseout="showCalendar = false"
-        class="relative"
+        class="relative cursor-pointer"
       >
         <i class="fa fa-calendar"></i>
         <div class="absolute right-1">
@@ -230,9 +234,9 @@ const setDates = () => {};
         <div
           v-for="(fixture, idx) in match.fixtures"
           :key="idx"
-          class="mb-3 bg-n-bg-gray rounded-lg p-3 flex justify-between items-center"
+          class="mb-3 bg-n-bg-gray cursor-pointer rounded-lg p-3 flex justify-between items-center"
         >
-          <div class="flex items-center gap-2">
+          <div @click="goToGame(56)" class="flex flex-grow items-center gap-2">
             <div
               v-if="fixture.hasStarted === false && fixture.hasEnded === false"
               class="grid gap-[6px] w-10"
@@ -251,7 +255,7 @@ const setDates = () => {};
                 class="absolute -left-[10px] rounded-tr-xl rounded-br-xl w-1 h-14 bg-n-orange"
               ></div>
               <p class="text-11px text-center font-thin text-n-orange">
-                {{ fixture.time }}
+                {{ fixture.time + "'" }}
               </p>
             </div>
             <div v-else class="flex justify-center items-center w-10">

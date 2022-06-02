@@ -14,6 +14,9 @@ module.exports = {
         "n-dark-orange": "#AB5E03",
         "n-light-green": "#23DF8C",
         "n-dark-red": "#961A3D",
+        "n-hover": "rgba(24,24,24,2)",
+        "n-hover3": "#808080",
+        "n-hover2": "#666",
       },
       fontSize: {
         "9px": "9px",
