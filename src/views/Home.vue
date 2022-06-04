@@ -14,6 +14,28 @@ const gameStatus = ref("NotStarted");
 const showCalendar = ref(false);
 const gameDate = ref(new Date().toISOString().split("T")[0]);
 
+const twoDaysAgo = new Date().getTime() - 48 * 60 * 60 * 1000;
+const yesterday = new Date().getTime() - 24 * 60 * 60 * 1000;
+const today = new Date();
+const tomorrow = new Date().getTime() + 24 * 60 * 60 * 1000;
+const twoDaysTime = new Date().getTime() + 48 * 60 * 60 * 1000;
+
+const dates = [twoDaysAgo, yesterday, today, tomorrow, twoDaysTime];
+
+const activeDateIndex = ref(2);
+
+const gameDates = ref([]);
+
+const formatDate = (date: string | number | Date) => {
+  const newDate = new Intl.DateTimeFormat("en-ng", {
+    day: "2-digit",
+    weekday: "short",
+    month: "short",
+  }).format(new Date(date));
+
+  return newDate;
+};
+
 const gameFixtures = ref([
   {
     league: "Premier League",
@@ -162,30 +184,26 @@ const setDates = () => {};
         Live
       </p>
 
-      <div class="cursor-pointer">
-        <p class="font-bold flex justify-center text-11px uppercase">Wed</p>
-        <p class="font-bold text-9px uppercase">18 may</p>
-      </div>
-      <div class="cursor-pointer">
-        <p class="font-bold flex justify-center text-11px uppercase">thu</p>
-        <p class="font-bold text-9px uppercase">19 may</p>
-      </div>
-      <div class="font-bold cursor-pointer">
+      <div
+        v-for="(date, idx) in dates"
+        :key="idx"
+        class="cursor-pointer"
+        @click="activeDateIndex = idx"
+      >
         <p
-          class="font-bold flex justify-center text-11px uppercase text-n-orange"
+          class="font-bold flex justify-center text-11px uppercase"
+          :class="idx === activeDateIndex ? 'text-n-orange' : ''"
         >
-          today
+          {{ date === today ? "TODAY" : formatDate(date).slice(0, 3) }}
         </p>
-        <p class="font-bold text-9px uppercase text-n-orange">20 may</p>
+        <p
+          class="font-bold text-9px uppercase"
+          :class="idx === activeDateIndex ? 'text-n-orange' : ''"
+        >
+          {{ formatDate(date).slice(4) }}
+        </p>
       </div>
-      <div class="cursor-pointer">
-        <p class="font-bold flex justify-center text-11px uppercase">sat</p>
-        <p class="font-bold text-9px uppercase">21 may</p>
-      </div>
-      <div class="cursor-pointer">
-        <p class="font-bold flex justify-center text-11px uppercase">sun</p>
-        <p class="font-bold text-9px uppercase">22 may</p>
-      </div>
+
       <div
         @mouseover="showCalendar = true"
         @mouseout="showCalendar = false"

@@ -46,7 +46,7 @@ const activeTab = ref("Football");
         :class="
           activeTab === tab.name
             ? 'bg-n-white text-n-black'
-            : 'bg-n-bg-gray text-pry '
+            : 'bg-n-bg-gray text-pry hover:bg-n-white hover:text-n-black '
         "
       >
         {{ tab.name }}
