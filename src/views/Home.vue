@@ -148,7 +148,7 @@ const liveGame = setInterval(() => {
       return { ...game };
     });
   });
-}, 15000);
+}, 5000);
 
 setInterval(() => {
   homeScore.value = getRandomScore(6);

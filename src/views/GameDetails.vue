@@ -513,7 +513,7 @@ setInterval(() => {
         <div
           class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
-          <p class="mr-2 text-py text-11px">12'</p>
+          <p class="mr-2 text-py text-11px">8'</p>
           <div class="text-11px flex items-center">
             <p class="text-n-white">Van Djick</p>
             <div class="ml-2 h-3 w-2 bg-yellow-300 rounded-sm"></div>
@@ -522,85 +522,125 @@ setInterval(() => {
         <div
           class="px-2 py-3 flex justify-between items-center border-n-bg-gray border-b"
         >
-          <p class="mr-2 text-pry text-11px">30'</p>
+          <p class="mr-2 text-pry text-11px">15'</p>
           <div class="text-11px flex items-center">
             <div class="mr-2 h-3 w-2 bg-yellow-300 rounded-sm"></div>
-            <p class="text-n-white">Allison</p>
+            <p class="text-n-white">Phil Foden</p>
           </div>
         </div>
         <div
           class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
-          <p class="mr-2 text-py text-11px">12'</p>
+          <p class="mr-2 text-py text-11px">20'</p>
           <div class="text-11px flex items-center">
-            <p class="text-n-white">Van Djick</p>
+            <p class="text-n-white">Roberto Firmino</p>
             <div class="ml-2 h-3 w-2 bg-yellow-300 rounded-sm"></div>
           </div>
         </div>
         <div
           class="px-2 py-3 flex justify-between items-center border-n-bg-gray border-b"
         >
-          <p class="mr-2 text-pry text-11px">30'</p>
+          <p class="mr-2 text-pry text-11px">22'</p>
           <div class="text-11px flex items-center">
             <div class="mr-2 h-3 w-2 bg-yellow-300 rounded-sm"></div>
-            <p class="text-n-white">Allison</p>
+            <p class="text-n-white">Rodri</p>
           </div>
         </div>
         <div
           class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
-          <p class="mr-2 text-py text-11px">12'</p>
+          <p class="mr-2 text-py text-11px">32'</p>
           <div class="text-11px flex items-center">
-            <p class="text-n-white">Van Djick</p>
+            <p class="text-n-white">Andrew Robertson</p>
             <div class="ml-2 h-3 w-2 bg-yellow-300 rounded-sm"></div>
           </div>
         </div>
         <div
           class="px-2 py-3 flex justify-between items-center border-n-bg-gray border-b"
         >
-          <p class="mr-2 text-pry text-11px">30'</p>
+          <p class="mr-2 text-pry text-11px">40'</p>
           <div class="text-11px flex items-center">
             <div class="mr-2 h-3 w-2 bg-yellow-300 rounded-sm"></div>
-            <p class="text-n-white">Allison</p>
+            <p class="text-n-white">Kyle Walker</p>
           </div>
         </div>
         <div
           class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
-          <p class="mr-2 text-py text-11px">12'</p>
+          <p class="mr-2 text-py text-11px">52'</p>
           <div class="text-11px flex items-center">
-            <p class="text-n-white">Van Djick</p>
+            <p class="text-n-white">Fabio Carvalho</p>
             <div class="ml-2 h-3 w-2 bg-yellow-300 rounded-sm"></div>
           </div>
         </div>
         <div
           class="px-2 py-3 flex justify-between items-center border-n-bg-gray border-b"
         >
-          <p class="mr-2 text-pry text-11px">30'</p>
+          <p class="mr-2 text-pry text-11px">80'</p>
           <div class="text-11px flex items-center">
             <div class="mr-2 h-3 w-2 bg-yellow-300 rounded-sm"></div>
-            <p class="text-n-white">Allison</p>
+            <p class="text-n-white">Ruben Dias</p>
           </div>
         </div>
       </div>
 
       <div v-else class="mx-1 border border-n-bg-gray rounded-md">
+        <div class="px-2 py-3 flex items-center border-n-bg-gray border-b">
+          <p class="mr-2 text-pry text-11px">45+2'</p>
+          <p class="text-pry text-11px">
+            Ball possession: Liverpool: 51%, Manchester City: 49%
+          </p>
+        </div>
+
         <div
           class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
-          <p class="mr-2 text-pry text-11px">1'</p>
+          <p class="mr-2 text-pry text-11px">45+2'</p>
           <p class="text-pry text-11px">
-            Liverpool win the toss and will have the first kick
+            It's over! The referee blows for halftime
           </p>
         </div>
+
+        <div class="px-2 py-3 flex items-center border-n-bg-gray border-b">
+          <p class="mr-2 text-pry text-11px">40'</p>
+          <p class="text-pry text-11px">
+            A brilliant clearancefrom Walker to give Manchester City a sigh of
+            relief
+          </p>
+        </div>
+
+        <div class="px-2 py-3 flex items-center border-n-bg-gray border-b">
+          <p class="mr-2 text-pry text-11px">38'</p>
+          <p class="text-pry text-11px">
+            Liverpool mounting pressure on City's defenders
+          </p>
+        </div>
+
+        <div class="px-2 py-3 flex items-center border-n-bg-gray border-b">
+          <p class="mr-2 text-pry text-11px">34'</p>
+          <p class="text-pry text-11px">
+            The goalkeeper plays a long ball to Gabriel Jesus
+          </p>
+        </div>
+
         <div
           class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
-          <p class="mr-2 text-pry text-11px">3'</p>
+          <p class="mr-2 text-pry text-11px">23'</p>
           <p class="text-pry text-11px">
-            The ball is being played from the left to the right
+            Sadio Mane hits the ball towards goal
           </p>
         </div>
+
+        <div
+          class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
+        >
+          <p class="mr-2 text-pry text-11px">9'</p>
+          <p class="text-pry text-11px">
+            Ferdinho completes a clean tackle to give Liverpool a throw in
+          </p>
+        </div>
+
         <div
           class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
@@ -613,50 +653,18 @@ setInterval(() => {
         <div
           class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
-          <p class="mr-2 text-pry text-11px">9'</p>
+          <p class="mr-2 text-pry text-11px">3'</p>
           <p class="text-pry text-11px">
-            Ferdinho completes a clean tackle to give Liverpool a throw in
+            The ball is being played from the left to the right
           </p>
         </div>
+
         <div
           class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
         >
-          <p class="mr-2 text-pry text-11px">23'</p>
+          <p class="mr-2 text-pry text-11px">1'</p>
           <p class="text-pry text-11px">
-            Sadio Mane hits the ball towards goal
-          </p>
-        </div>
-        <div class="px-2 py-3 flex items-center border-n-bg-gray border-b">
-          <p class="mr-2 text-pry text-11px">34'</p>
-          <p class="text-pry text-11px">
-            The goalkeeper plays a long ball to Gabriel Jesus
-          </p>
-        </div>
-        <div class="px-2 py-3 flex items-center border-n-bg-gray border-b">
-          <p class="mr-2 text-pry text-11px">38'</p>
-          <p class="text-pry text-11px">
-            Liverpool mounting pressure on City's defenders
-          </p>
-        </div>
-        <div class="px-2 py-3 flex items-center border-n-bg-gray border-b">
-          <p class="mr-2 text-pry text-11px">40'</p>
-          <p class="text-pry text-11px">
-            A brilliant clearancefrom Walker to give Manchester City a sigh of
-            relief
-          </p>
-        </div>
-        <div
-          class="px-2 py-3 flex justify-start items-center border-n-bg-gray border-b"
-        >
-          <p class="mr-2 text-pry text-11px">45+2'</p>
-          <p class="text-pry text-11px">
-            It's over! The referee blows for halftime
-          </p>
-        </div>
-        <div class="px-2 py-3 flex items-center border-n-bg-gray border-b">
-          <p class="mr-2 text-pry text-11px">45+2'</p>
-          <p class="text-pry text-11px">
-            Ball possession: Liverpool: 51%, Manchester City: 49%
+            Liverpool win the toss and will have the first kick
           </p>
         </div>
       </div>
