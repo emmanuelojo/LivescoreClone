@@ -252,7 +252,7 @@ const setDates = () => {};
         <div
           v-for="(fixture, idx) in match.fixtures"
           :key="idx"
-          class="mb-3 bg-n-bg-gray cursor-pointer rounded-lg p-3 flex justify-between items-center"
+          class="mb-3 bg-n-bg-gray hover:bg-[#4f4d4d] cursor-pointer rounded-lg p-3 flex justify-between items-center"
         >
           <div @click="goToGame(56)" class="flex flex-grow items-center gap-2">
             <div

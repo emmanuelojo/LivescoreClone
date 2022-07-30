@@ -1195,7 +1195,7 @@ setInterval(() => {
         </div>
 
         <div
-          class="bg-n-bg-gray rounded-lg p-3 flex justify-between items-center"
+          class="bg-n-bg-gray hover:bg-[#4f4d4d] rounded-lg p-3 flex justify-between items-center"
         >
           <div class="flex gap-2">
             <div class="grid gap-2">
